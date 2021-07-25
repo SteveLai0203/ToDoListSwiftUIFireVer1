@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		B7641FFA26ADC1DC00C31C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7641FF926ADC1DC00C31C59 /* AppDelegate.swift */; };
 		B7641FFC26ADC1DC00C31C59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7641FFB26ADC1DC00C31C59 /* SceneDelegate.swift */; };
-		B7641FFE26ADC1DC00C31C59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7641FFD26ADC1DC00C31C59 /* ContentView.swift */; };
+		B7641FFE26ADC1DC00C31C59 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7641FFD26ADC1DC00C31C59 /* TaskListView.swift */; };
 		B764200026ADC1DD00C31C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7641FFF26ADC1DD00C31C59 /* Assets.xcassets */; };
 		B764200326ADC1DD00C31C59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B764200226ADC1DD00C31C59 /* Preview Assets.xcassets */; };
 		B764200626ADC1DD00C31C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B764200426ADC1DD00C31C59 /* LaunchScreen.storyboard */; };
+		B764200F26ADC20700C31C59 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764200E26ADC20700C31C59 /* Task.swift */; };
+		B7F542B626ADDB1200E09CF7 /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F542B526ADDB1200E09CF7 /* TaskCellViewModel.swift */; };
+		B7F542B826ADDDE800E09CF7 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F542B726ADDDE800E09CF7 /* TaskListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B7641FF626ADC1DC00C31C59 /* ToDoListSwiftUIFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListSwiftUIFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7641FF926ADC1DC00C31C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7641FFB26ADC1DC00C31C59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7641FFD26ADC1DC00C31C59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B7641FFD26ADC1DC00C31C59 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		B7641FFF26ADC1DD00C31C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B764200226ADC1DD00C31C59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B764200526ADC1DD00C31C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B764200726ADC1DD00C31C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B764200E26ADC20700C31C59 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B7F542B526ADDB1200E09CF7 /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
+		B7F542B726ADDDE800E09CF7 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,10 @@
 		B7641FF826ADC1DC00C31C59 /* ToDoListSwiftUIFire */ = {
 			isa = PBXGroup;
 			children = (
-				B7641FF926ADC1DC00C31C59 /* AppDelegate.swift */,
-				B7641FFB26ADC1DC00C31C59 /* SceneDelegate.swift */,
-				B7641FFD26ADC1DC00C31C59 /* ContentView.swift */,
+				B764201026ADC36B00C31C59 /* App */,
+				B764200D26ADC1F300C31C59 /* Model */,
+				B7F542B426ADDAC800E09CF7 /* ViewModels */,
+				B764201126ADC37900C31C59 /* Views */,
 				B7641FFF26ADC1DD00C31C59 /* Assets.xcassets */,
 				B764200426ADC1DD00C31C59 /* LaunchScreen.storyboard */,
 				B764200726ADC1DD00C31C59 /* Info.plist */,
@@ -73,6 +80,40 @@
 				B764200226ADC1DD00C31C59 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B764200D26ADC1F300C31C59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B764200E26ADC20700C31C59 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B764201026ADC36B00C31C59 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B7641FF926ADC1DC00C31C59 /* AppDelegate.swift */,
+				B7641FFB26ADC1DC00C31C59 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B764201126ADC37900C31C59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7641FFD26ADC1DC00C31C59 /* TaskListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7F542B426ADDAC800E09CF7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B7F542B526ADDB1200E09CF7 /* TaskCellViewModel.swift */,
+				B7F542B726ADDDE800E09CF7 /* TaskListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7641FFA26ADC1DC00C31C59 /* AppDelegate.swift in Sources */,
+				B764200F26ADC20700C31C59 /* Task.swift in Sources */,
 				B7641FFC26ADC1DC00C31C59 /* SceneDelegate.swift in Sources */,
-				B7641FFE26ADC1DC00C31C59 /* ContentView.swift in Sources */,
+				B7641FFE26ADC1DC00C31C59 /* TaskListView.swift in Sources */,
+				B7F542B626ADDB1200E09CF7 /* TaskCellViewModel.swift in Sources */,
+				B7F542B826ADDDE800E09CF7 /* TaskListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
